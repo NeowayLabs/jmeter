@@ -79,8 +79,8 @@ RUN apk upgrade --update && \
            /tmp/* /var/cache/apk/* && \
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
 
-COPY jmeter.properties ${JMETER_HOME}/jmeter.properties
-COPY user.properties ${JMETER_HOME}/user.properties
+COPY jmeter.properties ${JMETER_HOME}/bin/jmeter.properties
+COPY user.properties ${JMETER_HOME}/bin/user.properties
 COPY jmeter /usr/local/bin/jmeter
 RUN chmod +x /usr/local/bin/jmeter
 
