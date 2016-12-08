@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec /opt/jmeter/bin/jmeter -n -t ${JMX_FILE} -l ${RESULT_CSV} -Jp_host=${HOST}
